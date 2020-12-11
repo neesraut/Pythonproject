@@ -6,7 +6,10 @@ from firstapp.views import(
     GetUsers,
     displayUsers,
     signUp,
-    success
+    success,
+    profile_edit,
+    cusmodel_users,
+    dynamicUser_edit,
 )
 
 urlpatterns = [
@@ -16,6 +19,13 @@ urlpatterns = [
 
     path('users1/', displayUsers, name='display-users'),
     path('signupUsers/',signUp, name = 'signup-user'),
+    path('profileEdit/',profile_edit, name = 'edit-user'),
+
+    path('cusModelUsers/',cusmodel_users, name = 'cus-model-user'),
+
+    path('users/change/<int:id>/', dynamicUser_edit, name= 'dynamic-user-edit'),
+
+
     path('success/',success, name = 'success')
 ]
 
