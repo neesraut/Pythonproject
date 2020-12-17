@@ -12,5 +12,5 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, get_object_or_404, redirect
 
 def libraryHome(request):
-    template = "mylibrarytemplate/index.html"
+    template = "mylibrarytemplate/manage/pages/home.html"
     return render(request, template)
